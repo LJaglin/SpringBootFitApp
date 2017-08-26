@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-    	<meta charset="UTF-8"></meta>
-        <title>Welcome, Spring!</title>
+    <head th:replace="mainTemplate::header">
     </head>
     <body>
     	<form method = "post">
 	    	<input type = "text" name = "name"></input>
 	    	<button type = "submit">Say hello!</button>    
     	</form>
+    	<div th:replace="mainTemplate::footer"></div>
     </body>
 </html>    

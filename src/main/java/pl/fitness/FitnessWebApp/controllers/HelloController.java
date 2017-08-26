@@ -32,6 +32,7 @@ public class HelloController {
 		}
 			
 		model.addAttribute("message", HelloMessage.getMessage(nameFromRequest));
+		model.addAttribute("title", "Welcome to FitnessApp!");
 		return "hello";
 	}
 }
