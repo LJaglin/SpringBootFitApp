@@ -2,6 +2,15 @@ package pl.fitness.FitnessWebApp.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name = "USERS")
 public class Users {
 	
 	private long userId;
@@ -14,6 +23,10 @@ public class Users {
 		this.userId = userId;
 	}
 	
+	@Id
+	@GeneratedValue
+	@NotNull
+	@Column(name = "USER_ID", unique = true)
 	public long getUserId() {
 		return userId;
 	}
@@ -22,10 +35,14 @@ public class Users {
 		this.login = login;
 	}
 	
+	@NotNull
+	@Column(name = "USER_LOGIN")
 	public String getLogin() {
 		return login;
 	}
 
+	@NotNull
+	@Column(name = "USER_EMAIL")
 	public String geteMail() {
 		return eMail;
 	}
@@ -34,6 +51,8 @@ public class Users {
 		this.eMail = eMail;
 	}
 
+	@NotNull
+	@Column(name = "USER_PASSWORD")
 	public String getPassword() {
 		return password;
 	}
@@ -42,6 +61,8 @@ public class Users {
 		this.password = password;
 	}
 
+	@NotNull
+	@Column(name = "CREATED_DATE")
 	public Date getCreatedDate() {
 		return createdDate;
 	}
