@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="mainTemplate::header">
+    </head>
+    <body>
+    	<form method = "post">
+	    	login: <input type = "text" name = "login"></input>
+	    	<br />
+	    	e-mail: <input type = "text" name = "email"></input>
+	    	<br />
+	    	has³o: <input type = "text" name = "password"></input>
+	    	<br />
+	    	<button type = "submit">Utwórz konto</button>    
+    	</form>
+    	<div th:replace="mainTemplate::footer"></div>
+    </body>
+</html>    
